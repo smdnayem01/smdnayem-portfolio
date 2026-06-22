@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <!-- MyLogo -->
+        <a class="navbar-brand fw-bold fs-3 text-warning" href="#"
+          >SMDNAYEM<span class="text-info fs-6">.dev</span></a
+        >
+
+        <!-- Mobile Toogle Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menus -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start -->
+    <section
+      id="home"
+      class="bg-dark text-white d-flex align-items-center"
+      style="min-height: 90vh"
+    >
+      <div class="container py-5">
+        <div class="row align-items-center g-5 text-center text-lg-start">
+          <div class="col-lg-4 text-center">
+            <div
+              class="myphoto p-2 bg-warning bg-opacity-10 rounded-circle d-inline-block border border-2 border-warning shadow"
+            >
+              <img
+                class="myimage rounded-circle img-fluid"
+                src="https://i.ibb.co.com/JFv8zHpR/shekhmdnayem-no-BG.png"
+                alt="SHEKH MD NAYEM YOUSUF"
+                style="width: 280px; height: 280px; object-fit: cover"
+              />
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="myinfo">
+              <h5 class="text-warning text-uppercase tracking-wider mb-3">
+                Welcome to my world
+              </h5>
+
+              <h1 class="display-3 display-lg-1 fw-bold mb-3">
+                Hi, I'm <br class="d-md-none" /><span class="text-warning"
+                  >SHEKH MD NAYEM YOUSUF</span
+                >
+              </h1>
+
+              <p class="lead fs-3 mb-4 text-light">
+                A Passionate Web Developer & Designer
+              </p>
+
+              <div
+                class="d-grid gap-3 d-sm-flex justify-content-center justify-content-lg-start"
+              >
+                <a
+                  href="#portfolio"
+                  class="btn btn-warning btn-lg px-4 me-sm-2 fw-bold"
+                  >View My Work</a
+                >
+                <a href="#contact" class="btn btn-outline-light btn-lg px-4"
+                  >Contact Me</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section End -->
+    <!-- About Section Start -->
+    <section id="about" class="py-5 bg-white">
+      <div class="container py-4">
+        <!-- Section Title -->
+        <div class="text-center mb-5">
+          <h2 class="fw-bold display-5">
+            About <span class="text-warning">Me</span>
+          </h2>
+          <div
+            class="mx-auto bg-warning"
+            style="width: 60px; height: 4px; border-radius: 2px"
+          ></div>
+        </div>
+
+        <div class="row align-items-center g-5">
+          <!-- MyDescription -->
+          <div class="col-lg-6">
+            <h3 class="fw-semibold mb-3">Who am I?</h3>
+            <p class="text-muted leading-relaxed">
+              Hello! I'm a passionate web developer dedicated to building
+              beautiful, functional, and user-friendly websites. I love turning
+              complex problems into simple, elegant, and responsive designs.
+            </p>
+            <p class="text-muted mb-4">
+              My goal is to write clean, efficient code and constantly learn new
+              technologies to improve my craft. When I'm not coding, you can
+              find me exploring new design trends or drinking coffee.
+            </p>
+            <a href="#contact" class="btn btn-warning fw-bold px-4 py-2"
+              >Hire Me</a
+            >
+          </div>
+
+          <!-- MySkills  -->
+          <div class="col-lg-6">
+            <h3 class="fw-semibold mb-4">My Skills</h3>
+
+            <!-- HTML Skill -->
+            <div class="mb-3">
+              <div class="d-flex justify-content-between mb-1">
+                <span class="fw-bold">HTML5</span>
+                <span class="text-muted">95%</span>
+              </div>
+              <div class="progress" style="height: 10px">
+                <div
+                  class="progress-bar bg-warning"
+                  role="progressbar"
+                  style="width: 0%"
+                  aria-valuenow="95"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+
+            <!-- CSS Skill -->
+            <div class="mb-3">
+              <div class="d-flex justify-content-between mb-1">
+                <span class="fw-bold">CSS3 & Bootstrap</span>
+                <span class="text-muted">90%</span>
+              </div>
+              <div class="progress" style="height: 10px">
+                <div
+                  class="progress-bar bg-warning"
+                  role="progressbar"
+                  style="width: 0%"
+                  aria-valuenow="90"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+
+            <!-- JavaScript Skill -->
+            <div class="mb-3">
+              <div class="d-flex justify-content-between mb-1">
+                <span class="fw-bold">JavaScript</span>
+                <span class="text-muted">65%</span>
+              </div>
+              <div class="progress" style="height: 10px">
+                <div
+                  class="progress-bar bg-warning"
+                  role="progressbar"
+                  style="width: 0%"
+                  aria-valuenow="65"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+
+            <!-- jQuery Skill -->
+            <div class="mb-3">
+              <div class="d-flex justify-content-between mb-1">
+                <span class="fw-bold">jQuery</span>
+                <span class="text-muted">55%</span>
+              </div>
+              <div class="progress" style="height: 10px">
+                <div
+                  class="progress-bar bg-warning"
+                  role="progressbar"
+                  style="width: 0%"
+                  aria-valuenow="55"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section End -->
+    <!-- Portfolio Section Start -->
+    <section id="portfolio" class="py-5 bg-light">
+      <div class="container py-4">
+        <!-- Section Title -->
+        <div class="text-center mb-5">
+          <h2 class="fw-bold display-5">
+            My <span class="text-warning">Portfolio</span>
+          </h2>
+          <div
+            class="mx-auto bg-warning"
+            style="width: 60px; height: 4px; border-radius: 2px"
+          ></div>
+          <p class="text-muted mt-3">Here are some of my recent projects</p>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="row g-4">
+          <!-- Project 01 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm project-card">
+              <div class="overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=600"
+                  class="card-img-top project-img"
+                  alt="Project 1"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title fw-bold">E-Commerce Website</h5>
+                <p class="card-text text-muted">
+                  A modern online shopping platform built with HTML, Bootstrap,
+                  and jQuery.
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-sm btn-outline-warning text-dark fw-semibold"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 02 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm project-card">
+              <div class="overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600"
+                  class="card-img-top project-img"
+                  alt="Project 2"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Business Dashboard</h5>
+                <p class="card-text text-muted">
+                  An interactive admin panel featuring beautiful analytics
+                  charts and tables.
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-sm btn-outline-warning text-dark fw-semibold"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 03 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm project-card">
+              <div class="overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=600"
+                  class="card-img-top project-img"
+                  alt="Project 3"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Developer Blog</h5>
+                <p class="card-text text-muted">
+                  A clean and fully responsive blog website for tech
+                  enthusiasts.
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-sm btn-outline-warning text-dark fw-semibold"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio Section End -->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="py-5 bg-dark text-white">
+      <div class="container py-4">
+        <!-- সেকশন টাইটেল -->
+        <div class="text-center mb-5">
+          <h2 class="fw-bold display-5">
+            Contact <span class="text-warning">Me</span>
+          </h2>
+          <div
+            class="mx-auto bg-warning"
+            style="width: 60px; height: 4px; border-radius: 2px"
+          ></div>
+          <p class="text-muted mt-3">Feel free to reach out to me anytime!</p>
+        </div>
+
+        <div class="row g-5">
+          <!-- বাম পাশ: যোগাযোগের তথ্য -->
+          <div class="col-lg-5">
+            <h3 class="fw-semibold mb-4 text-warning">Let's Connect</h3>
+            <p class="text-light mb-4">
+              I'm always open to discussing new projects, creative ideas, or
+              opportunities to be part of your visions.
+            </p>
+
+            <div class="d-flex align-items-center mb-3">
+              <div
+                class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-3"
+                style="width: 40px; height: 40px"
+              >
+                <strong>📧</strong>
+              </div>
+              <div>
+                <h6 class="mb-0 fw-bold">Email</h6>
+                <span class="text-muted">your.email@example.com</span>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center mb-3">
+              <div
+                class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-3"
+                style="width: 40px; height: 40px"
+              >
+                <strong>📞</strong>
+              </div>
+              <div>
+                <h6 class="mb-0 fw-bold">Phone</h6>
+                <span class="text-muted">+880 1234 567890</span>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center mb-4">
+              <div
+                class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-3"
+                style="width: 40px; height: 40px"
+              >
+                <strong>📍</strong>
+              </div>
+              <div>
+                <h6 class="mb-0 fw-bold">Location</h6>
+                <span class="text-muted">Dhaka, Bangladesh</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ডান পাশ: কন্টাক্ট ফর্ম -->
+          <div class="col-lg-7">
+            <form
+              id="contactForm"
+              class="p-4 rounded shadow-sm bg-secondary bg-opacity-10"
+            >
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Your Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    required
+                    placeholder="Enter your name"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Your Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    required
+                    placeholder="Enter your email"
+                  />
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Subject</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="subject"
+                    required
+                    placeholder="Subject"
+                  />
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    rows="4"
+                    required
+                    placeholder="Write your message here..."
+                  ></textarea>
+                </div>
+                <div class="col-12 mt-4">
+                  <button
+                    type="submit"
+                    class="btn btn-warning w-100 fw-bold py-2 fs-5 text-dark"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Footer Start -->
+    <footer class="bg-black text-center py-4">
+      <div class="container">
+        <p class="mb-0">
+          &copy; 2026 Portfolio. All Rights Reserved. Designed by
+          <span class="text-warning fw-bold">SHEKH MD NAYEM YOUSUF</span>
+        </p>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
