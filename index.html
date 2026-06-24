@@ -3,20 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>SMDNAYEM's Portfolio</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="balooda2">
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div class="container">
         <!-- MyLogo -->
-        <a class="navbar-brand fw-bold fs-3 text-warning" href="#"
-          >SMDNAYEM<span class="text-info fs-6">.dev</span></a
+        <a class="navbar-brand fw-bold text-info fs-3" href="#"
+          >SMDNAYEM<span class="text-secondary fs-6">.dev</span></a
         >
 
         <!-- Mobile Toogle Button -->
@@ -47,6 +55,15 @@
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
+            <button id="darkModeToggle" class="btn btn-sm ms-lg-3 mt-2 mt-lg-0">
+              🌙
+            </button>
+            <button
+              id="langToggle"
+              class="btn text-body bg-body-secondary btn-sm ms-2 mt-2 mt-lg-0"
+            >
+              🇧🇩 বাংলা
+            </button>
           </ul>
         </div>
       </div>
@@ -63,7 +80,7 @@
         <div class="row align-items-center g-5 text-center text-lg-start">
           <div class="col-lg-4 text-center">
             <div
-              class="myphoto p-2 bg-warning bg-opacity-10 rounded-circle d-inline-block border border-2 border-warning shadow"
+              class="myphoto p-2 bg-info bg-opacity-10 rounded-circle d-inline-block border border-2 border-info shadow"
             >
               <img
                 class="myimage rounded-circle img-fluid"
@@ -76,18 +93,30 @@
 
           <div class="col-lg-8">
             <div class="myinfo">
-              <h5 class="text-warning text-uppercase tracking-wider mb-3">
-                Welcome to my world
+              <h5 class="text-info text-uppercase tracking-wider mb-3">
+                <span class="lang-en">Welcome to my world</span>
+                <span class="lang-bn d-none">আমার বিশ্বে স্বাগতম</span>
               </h5>
 
               <h1 class="display-3 display-lg-1 fw-bold mb-3">
-                Hi, I'm <br class="d-md-none" /><span class="text-warning"
-                  >SHEKH MD NAYEM YOUSUF</span
+                <span class="lang-en">Hi, I'm</span>
+                <span class="lang-bn d-none">হাই, আমি</span>
+                <br class="d-md-none" />
+                <span class="text-info lang-en"
+                  >SHEKH MD NAYEM <br />YOUSUF</span
+                >
+                <span class="lang-bn d-none text-info"
+                  >শেখ মোঃ নাঈম <br />ইউসুফ</span
                 >
               </h1>
 
               <p class="lead fs-3 mb-4 text-light">
-                A Passionate Web Developer & Designer
+                <span class="lang-en"
+                  >A Passionate Web Developer & Designer</span
+                >
+                <span class="lang-bn d-none"
+                  >একজন উৎসাহী ওয়েব ডেভেলপার এবং ডিজাইনার</span
+                >
               </p>
 
               <div
@@ -95,7 +124,7 @@
               >
                 <a
                   href="#portfolio"
-                  class="btn btn-warning btn-lg px-4 me-sm-2 fw-bold"
+                  class="btn btn-info btn-lg px-4 me-sm-2 fw-bold"
                   >View My Work</a
                 >
                 <a href="#contact" class="btn btn-outline-light btn-lg px-4"
@@ -109,15 +138,19 @@
     </section>
     <!-- Hero Section End -->
     <!-- About Section Start -->
-    <section id="about" class="py-5 bg-white">
+    <section
+      id="about"
+      class="py-5 bg-white d-flex justify-content-center align-items-center"
+      style="min-height: 90vh"
+    >
       <div class="container py-4">
         <!-- Section Title -->
         <div class="text-center mb-5">
           <h2 class="fw-bold display-5">
-            About <span class="text-warning">Me</span>
+            About <span class="text-info">Me</span>
           </h2>
           <div
-            class="mx-auto bg-warning"
+            class="mx-auto bg-info"
             style="width: 60px; height: 4px; border-radius: 2px"
           ></div>
         </div>
@@ -126,17 +159,17 @@
           <!-- MyDescription -->
           <div class="col-lg-6">
             <h3 class="fw-semibold mb-3">Who am I?</h3>
-            <p class="text-muted leading-relaxed">
+            <p class="text-secondary leading-relaxed">
               Hello! I'm a passionate web developer dedicated to building
               beautiful, functional, and user-friendly websites. I love turning
               complex problems into simple, elegant, and responsive designs.
             </p>
-            <p class="text-muted mb-4">
+            <p class="text-secondary mb-4">
               My goal is to write clean, efficient code and constantly learn new
               technologies to improve my craft. When I'm not coding, you can
               find me exploring new design trends or drinking coffee.
             </p>
-            <a href="#contact" class="btn btn-warning fw-bold px-4 py-2"
+            <a href="#contact" class="btn btn-info fw-bold px-4 py-2"
               >Hire Me</a
             >
           </div>
@@ -149,11 +182,11 @@
             <div class="mb-3">
               <div class="d-flex justify-content-between mb-1">
                 <span class="fw-bold">HTML5</span>
-                <span class="text-muted">95%</span>
+                <span class="text-secondary">95%</span>
               </div>
               <div class="progress" style="height: 10px">
                 <div
-                  class="progress-bar bg-warning"
+                  class="progress-bar bg-info"
                   role="progressbar"
                   style="width: 0%"
                   aria-valuenow="95"
@@ -167,11 +200,11 @@
             <div class="mb-3">
               <div class="d-flex justify-content-between mb-1">
                 <span class="fw-bold">CSS3 & Bootstrap</span>
-                <span class="text-muted">90%</span>
+                <span class="text-secondary">90%</span>
               </div>
               <div class="progress" style="height: 10px">
                 <div
-                  class="progress-bar bg-warning"
+                  class="progress-bar bg-info"
                   role="progressbar"
                   style="width: 0%"
                   aria-valuenow="90"
@@ -185,11 +218,11 @@
             <div class="mb-3">
               <div class="d-flex justify-content-between mb-1">
                 <span class="fw-bold">JavaScript</span>
-                <span class="text-muted">65%</span>
+                <span class="text-secondary">65%</span>
               </div>
               <div class="progress" style="height: 10px">
                 <div
-                  class="progress-bar bg-warning"
+                  class="progress-bar bg-info"
                   role="progressbar"
                   style="width: 0%"
                   aria-valuenow="65"
@@ -203,11 +236,11 @@
             <div class="mb-3">
               <div class="d-flex justify-content-between mb-1">
                 <span class="fw-bold">jQuery</span>
-                <span class="text-muted">55%</span>
+                <span class="text-secondary">55%</span>
               </div>
               <div class="progress" style="height: 10px">
                 <div
-                  class="progress-bar bg-warning"
+                  class="progress-bar bg-info"
                   role="progressbar"
                   style="width: 0%"
                   aria-valuenow="55"
@@ -227,13 +260,13 @@
         <!-- Section Title -->
         <div class="text-center mb-5">
           <h2 class="fw-bold display-5">
-            My <span class="text-warning">Portfolio</span>
+            My <span class="text-info">Portfolio</span>
           </h2>
           <div
-            class="mx-auto bg-warning"
+            class="mx-auto bg-info"
             style="width: 60px; height: 4px; border-radius: 2px"
           ></div>
-          <p class="text-muted mt-3">Here are some of my recent projects</p>
+          <p class="text-secondary mt-3">Here are some of my recent projects</p>
         </div>
 
         <!-- Project Grid -->
@@ -250,13 +283,13 @@
               </div>
               <div class="card-body">
                 <h5 class="card-title fw-bold">E-Commerce Website</h5>
-                <p class="card-text text-muted">
+                <p class="card-text text-secondary">
                   A modern online shopping platform built with HTML, Bootstrap,
                   and jQuery.
                 </p>
                 <a
                   href="#"
-                  class="btn btn-sm btn-outline-warning text-dark fw-semibold"
+                  class="btn btn-sm btn-outline-info text-body fw-semibold"
                   >View Project</a
                 >
               </div>
@@ -275,13 +308,13 @@
               </div>
               <div class="card-body">
                 <h5 class="card-title fw-bold">Business Dashboard</h5>
-                <p class="card-text text-muted">
+                <p class="card-text text-secondary">
                   An interactive admin panel featuring beautiful analytics
                   charts and tables.
                 </p>
                 <a
                   href="#"
-                  class="btn btn-sm btn-outline-warning text-dark fw-semibold"
+                  class="btn btn-sm btn-outline-info text-body fw-semibold"
                   >View Project</a
                 >
               </div>
@@ -300,13 +333,13 @@
               </div>
               <div class="card-body">
                 <h5 class="card-title fw-bold">Developer Blog</h5>
-                <p class="card-text text-muted">
+                <p class="card-text text-secondary">
                   A clean and fully responsive blog website for tech
                   enthusiasts.
                 </p>
                 <a
                   href="#"
-                  class="btn btn-sm btn-outline-warning text-dark fw-semibold"
+                  class="btn btn-sm btn-outline-info text-body fw-semibold"
                   >View Project</a
                 >
               </div>
@@ -323,19 +356,21 @@
         <!-- সেকশন টাইটেল -->
         <div class="text-center mb-5">
           <h2 class="fw-bold display-5">
-            Contact <span class="text-warning">Me</span>
+            Contact <span class="text-info">Me</span>
           </h2>
           <div
-            class="mx-auto bg-warning"
+            class="mx-auto bg-info"
             style="width: 60px; height: 4px; border-radius: 2px"
           ></div>
-          <p class="text-muted mt-3">Feel free to reach out to me anytime!</p>
+          <p class="text-secondary mt-3">
+            Feel free to reach out to me anytime!
+          </p>
         </div>
 
         <div class="row g-5">
           <!-- বাম পাশ: যোগাযোগের তথ্য -->
           <div class="col-lg-5">
-            <h3 class="fw-semibold mb-4 text-warning">Let's Connect</h3>
+            <h3 class="fw-semibold mb-4 text-info">Let's Connect</h3>
             <p class="text-light mb-4">
               I'm always open to discussing new projects, creative ideas, or
               opportunities to be part of your visions.
@@ -343,55 +378,61 @@
 
             <div class="d-flex align-items-center mb-3">
               <div
-                class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-3"
+                class="bg-info text-dark rounded-circle d-flex align-items-center justify-content-center me-3"
                 style="width: 40px; height: 40px"
               >
-                <strong>📧</strong>
+                <i class="fa-solid fa-envelope"></i>
               </div>
               <div>
                 <h6 class="mb-0 fw-bold">Email</h6>
-                <span class="text-muted">your.email@example.com</span>
+                <span class="text-secondary">smdwcloud@gmail.com</span>
               </div>
             </div>
 
             <div class="d-flex align-items-center mb-3">
               <div
-                class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-3"
+                class="bg-info text-dark rounded-circle d-flex align-items-center justify-content-center me-3"
                 style="width: 40px; height: 40px"
               >
-                <strong>📞</strong>
+                <i class="fa-solid fa-phone"></i>
               </div>
               <div>
                 <h6 class="mb-0 fw-bold">Phone</h6>
-                <span class="text-muted">+880 1234 567890</span>
+                <span class="text-secondary">+880179 1717 966</span>
               </div>
             </div>
 
             <div class="d-flex align-items-center mb-4">
               <div
-                class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-3"
+                class="bg-info text-dark rounded-circle d-flex align-items-center justify-content-center me-3"
                 style="width: 40px; height: 40px"
               >
-                <strong>📍</strong>
+                <i class="fa-solid fa-map-pin"></i>
               </div>
               <div>
                 <h6 class="mb-0 fw-bold">Location</h6>
-                <span class="text-muted">Dhaka, Bangladesh</span>
+                <span class="text-secondary"
+                  >Narayanganj, Dhaka, Bangladesh</span
+                >
               </div>
             </div>
           </div>
 
-          <!-- ডান পাশ: কন্টাক্ট ফর্ম -->
+          <!-- Right - Contact Form -->
           <div class="col-lg-7">
             <form
               id="contactForm"
+              action="https://formspree.io/f/mpqgwwwj"
+              method="POST"
               class="p-4 rounded shadow-sm bg-secondary bg-opacity-10"
             >
               <div class="row g-3">
                 <div class="col-md-6">
                   <label class="form-label">Your Name</label>
+                  <!-- name="name" যোগ করা হয়েছে -->
                   <input
                     type="text"
+                    name="name"
                     class="form-control"
                     id="name"
                     required
@@ -400,8 +441,10 @@
                 </div>
                 <div class="col-md-6">
                   <label class="form-label">Your Email</label>
+                  <!-- name="email" যোগ করা হয়েছে -->
                   <input
                     type="email"
+                    name="_replyto"
                     class="form-control"
                     id="email"
                     required
@@ -410,8 +453,10 @@
                 </div>
                 <div class="col-12">
                   <label class="form-label">Subject</label>
+                  <!-- name="subject" যোগ করা হয়েছে -->
                   <input
                     type="text"
+                    name="subject"
                     class="form-control"
                     id="subject"
                     required
@@ -420,7 +465,9 @@
                 </div>
                 <div class="col-12">
                   <label class="form-label">Message</label>
+                  <!-- name="message" যোগ করা হয়েছে -->
                   <textarea
+                    name="message"
                     class="form-control"
                     id="message"
                     rows="4"
@@ -431,7 +478,7 @@
                 <div class="col-12 mt-4">
                   <button
                     type="submit"
-                    class="btn btn-warning w-100 fw-bold py-2 fs-5 text-dark"
+                    class="btn btn-info w-100 fw-bold py-2 fs-5 text-dark"
                   >
                     Send Message
                   </button>
@@ -447,15 +494,29 @@
     <!-- Footer Start -->
     <footer class="bg-black text-center py-4">
       <div class="container">
-        <p class="mb-0">
+        <p class="mb-0 text-secondary">
           &copy; 2026 Portfolio. All Rights Reserved. Designed by
-          <span class="text-warning fw-bold">SHEKH MD NAYEM YOUSUF</span>
+          <span class="text-info fw-bold">SHEKH MD NAYEM YOUSUF</span>
         </p>
       </div>
     </footer>
+    <button
+      id="scrollTopBtn"
+      class="btn btn-info position-fixed bottom-0 end-0 m-4 text-dark shadow"
+      style="
+        display: none;
+        z-index: 99;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+      "
+    >
+      <i class="fa-solid fa-jet-fighter-up"></i>
+    </button>
     <!-- Footer End -->
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
   </body>

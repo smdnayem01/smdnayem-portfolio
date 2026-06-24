@@ -14,17 +14,15 @@ $(document).ready(function () {
   });
 });
 
-// পোর্টফোলিও বাটন হোভার ইফেক্ট (jQuery)
+// button Hover Effect (jQuery)
 $(".project-card .btn").hover(
   function () {
-    // মাউস ভেতরে আনলে ব্যাকগ্রাউন্ড হলুদ হবে এবং লেখা সাদা হবে
     $(this).css({
-      "background-color": "#ffc107",
-      color: "#000",
+      "background-color": "#0dcaf0",
+      color: "#fff",
     });
   },
   function () {
-    // মাউস সরিয়ে নিলে আগের অবস্থায় ফিরে যাবে
     $(this).css({
       "background-color": "transparent",
       color: "#212529",
@@ -33,21 +31,48 @@ $(".project-card .btn").hover(
 );
 
 // কন্টাক্ট ফর্ম সাবমিশন (jQuery)
-$("#contactForm").on("submit", function (event) {
-  event.preventDefault(); // পেজ যেন রিফ্রেশ না হয়
+$(document).ready(function () {
+  $("#contactForm").on("submit", function (e) {
+    e.preventDefault(); // পেজ রিফ্রেশ হওয়া বন্ধ করবে
 
-  // ইনপুটের ভ্যালুগুলো নেওয়া
-  var userName = $("#name").val();
+    var form = $(this);
+    var submitButton = form.find('button[type="submit"]');
 
-  // একটি সুন্দর অ্যালার্ট দেখানো
-  alert(
-    "ধন্যবাদ " +
-      userName +
-      "! আপনার মেসেজটি সফলভাবে পাঠানো হয়েছে। (এটি একটি ডেমো সাবমিশন)",
-  );
+    // বাটন লক করা যাতে ইউজার বারবার ক্লিক করতে না পারে
+    submitButton.prop("disabled", true).text("Sending...");
 
-  // ফর্মটি রিসেট বা খালি করা
-  $("#contactForm")[0].reset();
+    // AJAX এর মাধ্যমে ব্যাকগ্রাউন্ডে Formspree তে ডেটা পাঠানো
+    $.ajax({
+      url: form.attr("action"),
+      method: "POST",
+      data: form.serialize(),
+      dataType: "json",
+      success: function (data) {
+        // SweetAlert দিয়ে সফলতার মেসেজ
+        Swal.fire({
+          title: "Thank You!",
+          text: "Your message has reached me successfully.",
+          icon: "success",
+          confirmButtonColor: "#0dcaf0", // Bootstrap info color
+          confirmButtonText: "Ok",
+        });
+        form[0].reset(); // ফর্ম রিসেট
+      },
+      error: function (err) {
+        // SweetAlert দিয়ে ভুলের মেসেজ
+        Swal.fire({
+          title: "Oops...",
+          text: "Sorry, something went wrong. Please try again.",
+          icon: "error",
+          confirmButtonColor: "#dc3545",
+        });
+      },
+      complete: function () {
+        // বাটন আবার আগের অবস্থায় ফিরিয়ে আনা
+        submitButton.prop("disabled", false).text("Send Message");
+      },
+    });
+  });
 });
 
 // স্ক্রোল করার সময় স্কিল বার অ্যানিমেশন
@@ -68,5 +93,45 @@ $(window).on("scroll", function () {
       ); // ১.৫ সেকেন্ড ধরে অ্যানিমেশন হবে
     });
     skillAnimated = true; // একবার অ্যানিমেশন হলে আর বারবার হবে না
+  }
+});
+// স্ক্রোল করলে বাটন দেখানো বা লুকানো
+$(window).on("scroll", function () {
+  if ($(this).scrollTop() > 300) {
+    $("#scrollTopBtn").fadeIn();
+  } else {
+    $("#scrollTopBtn").fadeOut();
+  }
+});
+
+// বাটনে ক্লিক করলে স্মুথলি ওপরে ওঠা
+$("#scrollTopBtn").on("click", function () {
+  $("html, body").animate({ scrollTop: 0 }, 500);
+});
+$("#darkModeToggle").on("click", function () {
+  // বর্তমানে কোন থিম আছে তা চেক করা
+  var currentTheme = $("html").attr("data-bs-theme");
+
+  if (currentTheme === "dark") {
+    $("html").removeAttr("data-bs-theme"); // লাইট মোড
+    $(this).html("🌙").removeClass("btn-body");
+  } else {
+    $("html").attr("data-bs-theme", "dark"); // ডার্ক মোড
+    $(this).html("☀️").addClass("btn-body ");
+  }
+});
+
+$("#langToggle").on("click", function () {
+  // ইংরেজি লেখাগুলো লুকিয়ে থাকলে তার ওপর ভিত্তি করে লজিক
+  if ($(".lang-bn").hasClass("d-none")) {
+    // বাংলায় পরিবর্তন
+    $(".lang-en").addClass("d-none");
+    $(".lang-bn").removeClass("d-none");
+    $(this).text("🇬🇧 English");
+  } else {
+    // ইংরেজিতে পরিবর্তন
+    $(".lang-bn").addClass("d-none");
+    $(".lang-en").removeClass("d-none");
+    $(this).text("🇧🇩 বাংলা");
   }
 });
