@@ -1,14 +1,12 @@
 $(document).ready(function () {
   // হিরো সেকশনের ছবি এবং লেখাগুলোকে শুরুতে লুকিয়ে ফেলা
-  $(".myphoto, .myinfo h5, .myinfo h1, .myinfo p, .myinfo .d-grid").hide();
+  $(".myphoto, .myinfo h5, .myinfo h1, .myinfo p, .myinfo .heroButtons").hide();
 
   // সুন্দর করে একটার পর একটা Fade In করানো
   $(".myphoto").fadeIn(1000, function () {
     $(".myinfo h5").fadeIn(800, function () {
       $(".myinfo h1").fadeIn(800, function () {
-        $(".myinfo p").fadeIn(800, function () {
-          $(".myinfo .d-grid").fadeIn(800);
-        });
+        $(".myinfo p").fadeIn(800, function () {});
       });
     });
   });

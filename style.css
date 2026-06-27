@@ -35,7 +35,9 @@ body {
   box-shadow: 0 10px 20px rgba(255, 193, 7, 0.3);
 }
 
-.btn-outline-light:hover {
+.btn-outline-light:hover,
+.viewwork:hover,
+.social:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
 }
@@ -79,6 +81,7 @@ body {
 .project-card:hover .project-img {
   transform: scale(1.1);
 }
+
 /* Contact Form  */
 .form-control {
   background-color: #46484b;
@@ -131,4 +134,8 @@ footer {
 [data-bs-theme="dark"] .project-card {
   background-color: #252525 !important;
   color: #fff !important;
+}
+.social:hover {
+  background-color: transparent;
+  border: 2px solid #0dcaf0;
 }
